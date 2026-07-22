@@ -24,10 +24,10 @@ const TESTIMONIALS = [
 
 function Navbar() {
   return (
-    <div className="flex items-center justify-between px-8 lg:px-16 py-5">
-      <div className="flex items-center gap-2.5">
-        <img src="/logo.svg" alt="BrumeAgri" className="w-9 h-9 rounded-lg" />
-        <span className="font-display font-extrabold text-lg text-neutral-900">
+    <div className="flex items-center justify-between px-4 md:px-8 lg:px-16 py-4 md:py-5 gap-2">
+      <div className="flex items-center gap-2 min-w-0">
+        <img src="/logo.svg" alt="BrumeAgri" className="w-8 h-8 md:w-9 md:h-9 rounded-lg flex-shrink-0" />
+        <span className="font-display font-extrabold text-base md:text-lg text-neutral-900 truncate">
           Brume<span style={{ color: '#15803d' }}>Agri</span>
         </span>
       </div>
@@ -36,13 +36,13 @@ function Navbar() {
         <a href="#solution" className="hover:text-neutral-900 transition">Solution</a>
         <a href="#customers" className="hover:text-neutral-900 transition">Customers</a>
       </div>
-      <div className="flex items-center gap-3">
-        <Link to="/login" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition">
+      <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
+        <Link to="/login" className="hidden sm:block text-sm font-medium text-neutral-600 hover:text-neutral-900 transition">
           Sign in
         </Link>
         <Link
           to="/register"
-          className="text-sm font-semibold text-white px-5 py-2.5 rounded-xl transition hover:opacity-90"
+          className="text-xs md:text-sm font-semibold text-white px-3 md:px-5 py-2 md:py-2.5 rounded-xl transition hover:opacity-90 whitespace-nowrap"
           style={{ backgroundColor: '#15803d' }}
         >
           Get started
@@ -85,7 +85,7 @@ function Landing() {
         <p className="text-xs text-neutral-400 mt-4">No credit card required · Works on any phone</p>
 
         {/* Dashboard preview mockup */}
-        <div className="mt-14 max-w-3xl mx-auto bg-white rounded-2xl border border-neutral-200 shadow-xl overflow-hidden text-left flex">
+        <div className="hidden md:flex mt-14 max-w-3xl mx-auto bg-white rounded-2xl border border-neutral-200 shadow-xl overflow-hidden text-left">
           <div className="w-40 flex-shrink-0 p-4" style={{ backgroundColor: '#0a0f0c' }}>
             <div className="flex items-center gap-2 mb-6">
               <img src="/logo.svg" alt="BrumeAgri" className="w-6 h-6 rounded" />
